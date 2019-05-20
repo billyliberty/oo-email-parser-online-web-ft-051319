@@ -9,4 +9,5 @@ class EmailParser
     @emails = @emails.gshub(/, " ").split
     @emails.uniq
   end
+  
 end
