@@ -6,8 +6,10 @@ class EmailParser
   end
 
   def parse
-    @emails = @emails.gshub(/, " ").split
-    @emails.uniq
+    emails.split.map do |address|
+      address.split(',')
+    end
+    .flatten.uniq
   end
   
 end
